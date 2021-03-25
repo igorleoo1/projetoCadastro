@@ -15,28 +15,26 @@
         <div class="row mt-2">
             <h3>Cabeçalho</h3>
         </div>
-
+        
         <h1>Cadastro</h1>
 
-        <form>
+        <form method="POST" action="{{ route('form') }}">
+            @csrf
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text"></div>
+                <input type="text" class="form-control" id="nomeImput" name="nome">
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Data de nascimento</label>
-                <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text"></div>
+                <input type="date" class="form-control" id="dataImput" name="data">
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="exampleInputPassword1" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senhaImput" name="senha">
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Matrícula</label>
-                <input type="Number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text"></div>
+                <input type="Number" class="form-control" id="matriculaImput" name="matricula">
             </div>
             <div class="mb-3 form-check">
 
@@ -47,9 +45,11 @@
 
 
         <div class="row mt-2">
-            <h3>Rodapé</h3>
+            <hr>
+            <p class="text-center">
+                Todos os direitos reservados - Igor Leonardo Soares Bezerra - 2021
+            </p>
         </div>
-    </div>
 </body>
 
 </html>

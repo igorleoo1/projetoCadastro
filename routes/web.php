@@ -17,4 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get ('/cadastro', '\App\Http\Controllers\CadastroController@cadastro');
+Route::get ('/menu', '\App\Http\Controllers\CadastroController@menu')->name('carregarMenu');
+
+Route::get ('/cadastrar', '\App\Http\Controllers\CadastroController@cadastro')->name('carregarCadastro');
+Route::post ('/cadastro-carregar', '\App\Http\Controllers\CadastroController@form')->name('form');
+
+Route::get ('/mostrarDados', '\App\Http\Controllers\CadastroController@mostrarDados')->name('dados');
+
+Route::get ('/listaUser', '\App\Http\Controllers\CadastroController@listaUser')->name('carregarLista');
+
