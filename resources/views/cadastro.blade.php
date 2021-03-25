@@ -41,7 +41,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Salvar</button>
       </form>
-</div>
+
 
     <div class="row mt-2">
         <h3>Rodapé</h3>
