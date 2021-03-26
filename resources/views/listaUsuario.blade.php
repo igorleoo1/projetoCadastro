@@ -12,7 +12,7 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <th scope="col">Id</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Data</th>
                 <th scope="col">Senha</th>
@@ -20,27 +20,15 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>21/12/2021</td>
-                <td>frede</td>
-                <td>121343</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>13/05/2021</td>
-                <td>rteve</td>
-                <td>43132</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry the Bird</td>
-                <td>12/07/2021</td>
-                <td>frtgrw</td>
-                <td>23435</td>
-              </tr>
+                @foreach ($usuarios as $usuario)
+                <tr>
+                    <th scope="row">{{$usuario->id}}</th>
+                    <td>{{$usuario->nome}}</td>
+                    <td>{{$usuario->data_nascimento}}</td>
+                    <td>{{$usuario->senha}}</td>
+                    <td>{{$usuario->matricula}}</td>
+                  </tr>
+                @endforeach
             </tbody>
           </table>
     </div>

@@ -26,7 +26,7 @@
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Data de nascimento</label>
-                <input type="date" class="form-control" id="dataImput" name="data">
+                <input type="date" class="form-control" id="dataImput" name="data_nascimento">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Senha</label>

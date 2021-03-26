@@ -26,3 +26,6 @@ Route::get ('/mostrarDados', '\App\Http\Controllers\CadastroController@mostrarDa
 
 Route::get ('/listaUser', '\App\Http\Controllers\CadastroController@listaUser')->name('carregarLista');
 
+Route::post ('/salvar_usuario', '\App\Http\Controllers\CadastroController@salvar')->name('salvarUsuario');
+
+
