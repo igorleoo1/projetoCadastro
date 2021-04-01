@@ -28,4 +28,8 @@ Route::get ('/listaUser', '\App\Http\Controllers\CadastroController@listaUser')-
 
 Route::post ('/salvar_usuario', '\App\Http\Controllers\CadastroController@salvar')->name('salvarUsuario');
 
+Route::get ('/editarUser/{id}', '\App\Http\Controllers\CadastroController@editarUser')->name('editarUser');
 
+Route::post ('/salvar_edicao', '\App\Http\Controllers\CadastroController@salvarEdicao')->name('salvarEdicao');
+
+Route::get ('/excluirUser/{id}', '\App\Http\Controllers\CadastroController@excluirUser')->name('excluirUser');
