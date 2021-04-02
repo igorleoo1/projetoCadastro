@@ -15,9 +15,13 @@
 
         <h1>Menu</h1>
 
-        <a class="btn btn-primary" href="{{ route('carregarCadastro') }}" role="button">Cadastrar</a><br><br>
+        <a class="btn btn-primary" href="{{ route('carregarCadastro') }}" role="button">Cadastrar usuário</a><br><br>
 
-        <a class="btn btn-primary" href="{{ route('carregarLista') }}" role="button">Lista de cadastros</a>
+        <a class="btn btn-primary" href="{{ route('carregarLista') }}" role="button">Lista de cadastros</a><br><br>
+
+        <a class="btn btn-primary" href="{{ route('cadastrarEndereco') }}" role="button">Cadastrar endereço</a><br><br>
+
+        <a class="btn btn-primary" href="{{ route('carregarEnd') }}" role="button">Lista de endereços</a>
     
 
         <div class="row mt-2">

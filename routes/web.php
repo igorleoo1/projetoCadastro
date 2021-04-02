@@ -33,3 +33,20 @@ Route::get ('/editarUser/{id}', '\App\Http\Controllers\CadastroController@editar
 Route::post ('/salvar_edicao', '\App\Http\Controllers\CadastroController@salvarEdicao')->name('salvarEdicao');
 
 Route::get ('/excluirUser/{id}', '\App\Http\Controllers\CadastroController@excluirUser')->name('excluirUser');
+
+
+
+Route::get ('/cadastrarEndereco', '\App\Http\Controllers\CadastroController@cadastrarEndereco')->name('cadastrarEndereco');
+Route::post ('/endereco-carregar', '\App\Http\Controllers\CadastroController@formEnd')->name('formEnd');
+
+Route::get ('/mostrarEndereco', '\App\Http\Controllers\CadastroController@mostrarEndereco')->name('endereco');
+
+Route::get ('/listaEnd', '\App\Http\Controllers\CadastroController@listaEnd')->name('carregarEnd');
+
+Route::post ('/salvar_usuario', '\App\Http\Controllers\CadastroController@salvar')->name('salvarUsuario');
+
+Route::get ('/editarEnd/{id}', '\App\Http\Controllers\CadastroController@editarEnd')->name('editarEnd');
+
+Route::post ('/salvar_end', '\App\Http\Controllers\CadastroController@salvarEnd')->name('salvarEnd');
+
+Route::get ('/excluirEnd/{id}', '\App\Http\Controllers\CadastroController@excluirEnd')->name('excluirEnd');

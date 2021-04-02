@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuario;
+use App\Models\Endereco;
 
 class CadastroController extends Controller
 {
@@ -68,5 +69,55 @@ class CadastroController extends Controller
         return redirect (route ('carregarLista'));
     }
 
+    public function cadastrarEndereco() {
+        return view('cadastrarEndereco');
+    }
+
+    public function formEnd(Request $request){
+        $endereco = new Endereco();
+        $endereco->cep = $request->cep;
+        $endereco->logradouro = $request->logradouro;
+        $endereco->numero = $request->numero;
+        $endereco->bairro = $request->bairro;
+        $endereco->complemento = $request->complemento;
+        $endereco->cidade = $request->cidade;
+        $endereco->estado = $request->estado;
+        $endereco->save();
+
+        return view('enderecoCompleto', compact('endereco'));
+    }
+
+    public function mostrarEndereco() {
+        return view('enderecoCompleto');
+    }
+
+    public function listaEnd() {
+        $enderecos = Endereco::all();
+        return view('listaEnd', compact('enderecos'));
+    }
+
+    public function editarEnd($id) {
+        $endereco = Endereco::where('id', $id)->first();
+        return view('editarEndereco', compact('endereco'));
+    }
+
+    public function salvarEnd(Request $request) {
+        $endereco = Endereco::where('id', $request->id)->first();
+        $endereco->cep = $request->cep;
+        $endereco->logradouro = $request->logradouro;
+        $endereco->numero = $request->numero;
+        $endereco->complemento = $request->complemento;
+        $endereco->bairro = $request->bairro;
+        $endereco->cidade = $request->cidade;
+        $endereco->estado = $request->estado;
+        $endereco->update();
+        return redirect (route ('carregarEnd'));
+    }
+
+    public function excluirEnd($id){
+        $endereco = Endereco::where('id', $id)->first();
+        $endereco->destroy($id);
+        return redirect (route ('carregarEnd'));
+    }
 
 }
