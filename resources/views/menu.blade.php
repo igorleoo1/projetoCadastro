@@ -21,7 +21,9 @@
 
         <a class="btn btn-primary" href="{{ route('cadastrarEndereco') }}" role="button">Cadastrar endereço</a><br><br>
 
-        <a class="btn btn-primary" href="{{ route('carregarEnd') }}" role="button">Lista de endereços</a>
+        <a class="btn btn-primary" href="{{ route('carregarEnd') }}" role="button">Lista de endereços</a><br><br>
+
+        <a class="btn btn-primary" href="{{ route('usuarioEndereco') }}" role="button">Cadastrar usuário e endereço</a>
     
 
         <div class="row mt-2">

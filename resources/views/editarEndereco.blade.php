@@ -46,7 +46,7 @@
                 <input type="string" class="form-control" id="matriculaImput" name="cidade" value='{{$endereco->cidade}}'>
             </div>
             <label for="uf">Estado</label>
-                <select id="estado" name="estado">
+                <select id="estado" name="estado" value='{{$endereco->estado}}'>
                     {{-- <option value="">-- Selecione --</option> --}}
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>

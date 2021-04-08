@@ -50,3 +50,7 @@ Route::get ('/editarEnd/{id}', '\App\Http\Controllers\CadastroController@editarE
 Route::post ('/salvar_end', '\App\Http\Controllers\CadastroController@salvarEnd')->name('salvarEnd');
 
 Route::get ('/excluirEnd/{id}', '\App\Http\Controllers\CadastroController@excluirEnd')->name('excluirEnd');
+
+
+Route::get ('/usuario-endereco', '\App\Http\Controllers\NovoController@usuarioEndereco')->name('usuarioEndereco');
+Route::post ('/saveuser', '\App\Http\Controllers\NovoController@save')->name('saveUser');

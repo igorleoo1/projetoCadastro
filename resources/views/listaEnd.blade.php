@@ -13,6 +13,7 @@
             <thead>
               <tr>
                 <th scope="col">Id</th> 
+                <th scope="col">Usuário</th>
                 <th scope="col">CEP</th>
                 <th scope="col">Logradouro</th>
                 <th scope="col">Número</th>
@@ -27,6 +28,7 @@
                 @foreach ($enderecos as $endereco)
                 <tr>
                     <th scope="row">{{$endereco->id}}</th>
+                    <th scope="row">{{$endereco->usuario->nome}}</th>
                     <td>{{$endereco->cep}}</td>
                     <td>{{$endereco->logradouro}}</td>
                     <td>{{$endereco->numero}}</td>
